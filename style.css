@@ -1,0 +1,231 @@
+header h1 {
+    text-align: center;
+    font-family: "Poppins-Bold";
+}
+
+section .container {
+    width: 90%;
+    display: grid;
+    margin: auto;
+}
+section .container .text-list {
+    min-height: 150px;
+    /*background-color: yellow;*/
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+section .container .text-list .list {
+    display: flex;
+    width: 50%;
+    min-height: 60px;
+    /*background-color: indianred;*/
+}
+section .container .text-list .list .check {
+    width: 10%;
+    /*background-color: hotpink;*/
+    min-height: inherit;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+section .container .text-list .list .check .checkbox {
+    border: none;
+}
+section .container .text-list .list .desc {
+    width: 80%;
+    min-height: inherit;
+    /*background-color: yellowgreen;*/
+}
+section .container .text-list .list .desc p {
+    font-family: "Poppins-Light";
+    text-align: center;
+    font-size: 15px;
+}
+section .container .text-list .list .delete {
+    width: 0;
+    /*background-color: hotpink;*/
+    min-height: inherit;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+section .container .text-list .list .delete.animation {
+    animation: animation 2s forwards;
+}
+section .container .text-list .list .delete.animation-delete {
+    animation: animationDelete 2s forwards;
+}
+@keyframes animation {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 5%;
+    }
+    100% {
+        width: 10%;
+    }
+}
+@keyframes animationDelete {
+    0% {
+        width: 10%;
+    }
+    50% {
+        width: 5%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+section .container .text-list .list .delete img {
+    max-width: 70%;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "Poppins-Light";
+    src: url("Poppins-Light.ttf");
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("Poppins-Bold.ttf");
+}
+
+
+
+
+
+section .container .input-text {
+    min-height: 200px;
+    /*background-color: deepskyblue;*/
+    display: grid;
+    align-items: center;
+}
+section .container .input-text .form {
+    width: 70%;
+    min-height: 150px;
+    /*background-color: red;*/
+    margin: auto;
+    display: flex;
+}
+section .container .input-text .form .text-field {
+    width: 80%;
+    height: inherit;
+    /*background-color: salmon;*/
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+section .container .input-text .form .text-field textarea {
+    width: 80%;
+    height: 80px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: "Poppins-Light";
+}
+section .container .input-text .form .button {
+    width: 20%;
+    height: inherit;
+    /*background-color: darkorange;*/
+    display: grid;
+    justify-items: flex-start;
+    align-items: center;
+}
+section .container .input-text .form .button button {
+    width: 50%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+/*// Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    section .container {
+        width: 100%;
+    }
+    section .container .input-text .form {
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    section .container .input-text .form .text-field {
+        width: 100%;
+    }
+    section .container .input-text .form .button {
+        width: 100%;
+    }
+    section .container .input-text .form .button {
+        justify-items: center;
+    }
+
+
+    section .container .text-list .list {
+        width: 90%;
+        flex-direction: column;
+    }
+    section .container .text-list .list .check {
+        width: 100%;
+    }
+    section .container .text-list .list .check .checkbox {
+        width: 50px;
+        height: 50px;
+    }
+    section .container .text-list .list .desc {
+        width: 100%;
+    }
+    section .container .text-list .list .delete {
+        width: 100%;
+        min-height: inherit;
+    }
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    section .container .input-text .form {
+        width: 100%;
+    }
+    section .container .text-list .list {
+        width: 90%;
+    }
+    section .container .text-list .list .check .checkbox {
+        width: 45px;
+        height: 50px;
+    }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    section .container .text-list .list {
+        width: 70%;
+    }
+    section .container .text-list .list .check .checkbox {
+        width: 45px;
+        height: 50px;
+    }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    section .container .text-list .list {
+        width: 70%;
+    }
+    section .container .text-list .list .check .checkbox {
+        width: 45px;
+        height: 50px;
+    }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    section .container .text-list .list .check .checkbox {
+        width: 45px;
+        height: 50px;
+    }
+}
